@@ -1,0 +1,5 @@
+bsec:
+  name: "Guilherme A."
+  bio: "Peel back the layers. See what they missed."
+  avatar: /assets/img/authors/bsec.jpg  # optional
+  url: https://behindsecurity.com  # optional
