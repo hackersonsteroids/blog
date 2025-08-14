@@ -10,7 +10,7 @@ math: true
 mermaid: true
 image:
   path: /assets/img/bsec/welcome.webp
-  alt: Chirpy theme preview on multiple devices
+  alt: Welcome image banner
 ---
 
 > TL;DR — Jekyll + Chirpy gives us a **secure, static, fast** site where **every post is just Markdown** (so your content is truly yours). We keep it on **GitHub** so the repository stays **public** and every change is tied to your GitHub identity for **visibility** and a clean contribution history.
@@ -39,7 +39,7 @@ Chirpy adds a polished UX and a bunch of batteries-included features without com
 
 ## How to add a new post
 
-1) **Create a branch**
+1. **Create a branch**
 
 ```bash
 git checkout -b post/your-title
@@ -52,17 +52,25 @@ To show proper bylines and optional avatars/links, add your author entry in `_da
 The **key** should be your handle (and must match the `author` value in each post’s front matter).
 
 ```yaml
+## Template › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/advanced-usage.md#setting-author-url
+# -------------------------------------
+# {author_id}:
+#   name: {full name}
+#   twitter: {twitter_of_author}
+#   url: {homepage_of_author}
+# -------------------------------------
+
 bsec:
-  name: "Guilherme A."
-  bio: "Peel back the layers. See what they missed."
-  avatar: /assets/img/authors/bsec.jpg  # optional
-  url: https://behindsecurity.com       # optional
+  name: Guilherme A.
+  url: https://behindsecurity.com/about/
+
+# More authors....
 ````
 
 * Put avatar images in `assets/img/authors/` (e.g., `assets/img/authors/bsec.jpg`).
 * In your post front matter use `author: bsec` (the key above).
 
-2. **Add a Markdown file under `_posts/`**
+3. **Add a Markdown file under `_posts/`**
 
 File name format is:
 
@@ -76,7 +84,7 @@ Example:
 _posts/2019-08-09-getting-started.md
 ```
 
-3. **Use this front matter header**
+4. **Use this front matter header**
 
 ```yaml
 ---
@@ -103,7 +111,7 @@ image:
 * **`math` / `mermaid`**: Enable LaTeX and Mermaid as needed.
 * **`image.path`**: Lead image shown in previews and at the top. **Recommended: 1200 × 630 px**
 
-4. **Add images to** `assets/img/<your-author-name>/`
+5. **Add images to** `assets/img/<your-author-name>/`
 
 ```
 assets/
@@ -118,7 +126,7 @@ Reference them in front matter as above, or in the body:
 ![Diagram alt text](/assets/img/<your-author-name>/your-image.webp)
 ```
 
-5. **Write your content in Markdown**
+6. **Write your content in Markdown**
 
 Use headings, code blocks, lists, and optional extras:
 
@@ -137,7 +145,7 @@ Use headings, code blocks, lists, and optional extras:
     C --> D[Publish]
   ```
 
-6. **Commit and push**
+7. **Commit and push**
 
 ```bash
 git add _posts/2025-08-14-why-jekyll-chirpy-and-github.md assets/img/<your-author-name>/your-image.webp
@@ -145,7 +153,7 @@ git commit -m "Add post: Why we use Jekyll + Chirpy (and GitHub)"
 git push -u origin post/your-title
 ```
 
-7. **Open a Pull Request to `main`**
+8. **Open a Pull Request to `main`**
 
 * We work with **branches and PRs**. Submit your PR, it'll be reviewed and merged when it’s approved.
 * After merge, the site will rebuild and your post will be live.
