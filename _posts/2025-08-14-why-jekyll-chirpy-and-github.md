@@ -1,7 +1,7 @@
 ---
 title: Why We Use Jekyll + Chirpy (and GitHub)
 description: Secure, static, fast publishing in Markdown — with a transparent, contributor-friendly workflow.
-author: hackersonsteroids
+author: bsec
 date: 2025-08-14 09:00:00 -0300
 categories: [Meta]
 tags: [jekyll, chirpy, github, workflow]
@@ -45,6 +45,23 @@ Chirpy adds a polished UX and a bunch of batteries-included features without com
 git checkout -b post/your-title
 ````
 
+
+2. **Add yourself to the authors list (once)**
+
+To show proper bylines and optional avatars/links, add your author entry in `_data/authors.yml`.  
+The **key** should be your handle (and must match the `author` value in each post’s front matter).
+
+```yaml
+bsec:
+  name: "Guilherme A."
+  bio: "Peel back the layers. See what they missed."
+  avatar: /assets/img/authors/bsec.jpg  # optional
+  url: https://behindsecurity.com       # optional
+````
+
+* Put avatar images in `assets/img/authors/` (e.g., `assets/img/authors/bsec.jpg`).
+* In your post front matter use `author: bsec` (the key above).
+
 2. **Add a Markdown file under `_posts/`**
 
 File name format is:
@@ -65,7 +82,7 @@ _posts/2019-08-09-getting-started.md
 ---
 title: Text and Typography
 description: Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.
-author: cotes
+author: your-handle   # must match a key in _data/authors.yml
 date: 2019-08-08 11:33:00 +0800
 categories: [Blogging, Demo]
 tags: [typography]
